@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/b1sted-labs/rock-paper-scissors/blob/dev/.github/assets/logo.png" width="160" alt="Rock, Paper, Scissors">
+  <img src="https://github.com/b1sted-labs/rock-paper-scissors/blob/main/.github/assets/logo.png" width="160" alt="Rock, Paper, Scissors">
 </p>
 <p align="center">
 <p align="center">
@@ -27,7 +27,7 @@
   /></a>
 </p>
 <p align="center">
-  <img src="https://github.com/b1sted-labs/rock-paper-scissors/blob/dev/.github/assets/screenshot.png" width="700" alt="Screenshot of the game in action" />
+  <img src="https://github.com/b1sted-labs/rock-paper-scissors/blob/main/.github/assets/screenshot.png" width="700" alt="Screenshot of the game in action" />
 </p>
 <p align="center">
   <a href="#introduction">Introduction</a> •

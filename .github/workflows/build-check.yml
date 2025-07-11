@@ -1,0 +1,28 @@
+name: build # Имя рабочего процесса (workflow), отображается в GitHub Actions
+
+on: # События, которые будут запускать этот workflow
+  push:
+    branches: [ main ] # Запуск при push в ветку 'main'
+  pull_request:
+    branches: [ main ] # Запуск при создании Pull Request, нацеленного на ветку 'main'
+
+jobs: # Список "работ" или задач (jobs), которые будут выполняться
+  build: # Имя этой конкретной работы. Можно назвать как угодно (например, compile-project)
+    runs-on: ubuntu-latest # Указываем, на каком типе виртуальной машины запускать эту работу (здесь - последняя версия Ubuntu)
+
+    steps: # Последовательность шагов, которые будут выполнены внутри работы 'build'
+      # Шаг 1: Клонирование (checkout) кода вашего репозитория
+      # Этот шаг загружает код из вашего репозитория в рабочее окружение исполнителя (runner)
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Используем готовое действие (action) 'actions/checkout' версии 4 для клонирования
+
+      # Шаг 2: Настройка сборочного окружения
+      # Здесь мы устанавливаем необходимые инструменты, такие как 'make' и компилятор 'gcc'
+      - name: Set up build environment
+        run: |
+          sudo apt-get update # Обновляем список пакетов
+          sudo apt-get install -y build-essential # Устанавливаем пакет 'build-essential', который содержит 'make', 'gcc', 'g++' и другие утилиты для сборки
+
+      # Шаг 3: Сборка проекта
+      - name: Build project
+        run: make

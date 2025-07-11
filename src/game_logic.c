@@ -15,7 +15,7 @@ static const GameResult winner_matrix[3][3] = {
     {RESULT_WIN, RESULT_LOSE, RESULT_DRAW}
 };
 
-int determine_winner(Choice player, Choice ai) {
+GameResult determine_winner(Choice player, Choice ai) {
     if (player < ROCK || player > PAPER || ai < ROCK || ai > PAPER) {
         return ERROR;
     }

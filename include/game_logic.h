@@ -11,6 +11,6 @@ typedef enum {
 } GameResult;
 
 Choice get_random_choice(void);
-int determine_winner(Choice player, Choice ai);
+GameResult determine_winner(Choice player, Choice ai);
 
 #endif // GAME_LOGIC_H

@@ -1,6 +1,6 @@
 #include "rps.h"
 
-const char* choice_names[] = {
+static const char* choice_names[] = {
     [ROCK]    = "Камень",
     [SCISSOR] = "Ножницы",
     [PAPER]   = "Бумага"

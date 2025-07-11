@@ -5,25 +5,28 @@
 #include "ui.h"
 #include "utils.h"
 
+#define ANSI_BOLD  "\x1b[1m"
+#define ANSI_RESET "\x1b[0m"
+
 #define INPUT_SIZE 10
 
 void print_welcome_message(void) {
-    printf("\u001b[1mДобро пожаловать в игру 'Камень, ножницы, бумага'!\u001b[0m\n\n");
+    printf(ANSI_BOLD "Добро пожаловать в игру 'Камень, ножницы, бумага'!" ANSI_RESET "\n\n");
     print_rules();
 }
 
 void print_rules(void) {
-    printf("\u001b[1mПравила игры 'Камень, ножницы, бумага'\u001b[0m\n\n");
+    printf(ANSI_BOLD "Правила игры 'Камень, ножницы, бумага'" ANSI_RESET "\n\n");
     printf("Цель игры — выбрать фигуру, которая победит фигуру противника (компьютера).\n\n");
     printf("В игре есть три фигуры:\n\n");
-    printf("* \u001b[1mКамень\u001b[0m\n");
-    printf("* \u001b[1mНожницы\u001b[0m\n");
-    printf("* \u001b[1mБумага\u001b[0m\n\n");
+    printf("* " ANSI_BOLD "Камень" ANSI_RESET "\n");
+    printf("* " ANSI_BOLD "Ножницы" ANSI_RESET "\n");
+    printf("* " ANSI_BOLD "Бумага" ANSI_RESET "\n\n");
     printf("Правила победы очень простые:\n\n");
-    printf("* \u001b[1mКамень\u001b[0m побеждает \u001b[1mНожницы\u001b[0m (камень ломает ножницы).\n");
-    printf("* \u001b[1mНожницы\u001b[0m побеждают \u001b[1mБумагу\u001b[0m (ножницы режут бумагу).\n");
-    printf("* \u001b[1mБумага\u001b[0m побеждает \u001b[1mКамень\u001b[0m (бумага накрывает камень).\n\n");
-    printf("Если вы и компьютер выбрали одну и ту же фигуру (например, Камень против Камня), объявляется \u001b[1mничья\u001b[0m, и раунд переигрывается или не засчитывается.\n\n");
+    printf("* " ANSI_BOLD "Камень" ANSI_RESET " побеждает " ANSI_BOLD "Ножницы" ANSI_RESET " (камень ломает ножницы).\n");
+    printf("* " ANSI_BOLD "Ножницы" ANSI_RESET " побеждают " ANSI_BOLD "Бумагу" ANSI_RESET " (ножницы режут бумагу).\n");
+    printf("* " ANSI_BOLD "Бумага" ANSI_RESET " побеждает " ANSI_BOLD "Камень" ANSI_RESET " (бумага накрывает камень).\n\n");
+    printf("Если вы и компьютер выбрали одну и ту же фигуру (например, Камень против Камня), объявляется " ANSI_BOLD "ничья" ANSI_RESET ", и раунд переигрывается или не засчитывается.\n\n");
     printf("Ваша задача — предугадать ход компьютера и выбрать выигрышную фигуру!\n\n");
 }
 

@@ -13,8 +13,8 @@
     src="https://img.shields.io/badge/features-core_gameplay-brightgreen"
     alt="Features"
   /></a>
-  <a href="#installation--building"><img
-    src="https://img.shields.io/badge/build-Makefile-blue"
+  <a href="https://github.com/b1sted-labs/rock-paper-scissors/actions"><img
+    src="https://github.com/b1sted-labs/rock-paper-scissors/workflows/build/badge.svg"
     alt="Build"
   /></a>
   <a href="#prerequisites"><img

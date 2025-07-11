@@ -93,14 +93,14 @@ bool ask_user_continue(void) {
     }
 }
 
-static const char* a_explanation_matrix[3][3] = {
+static const char* explanation_matrix[3][3] = {
     {NULL, "Камень бьёт ножницы", "Бумага накрывает камень"},
     {"Камень бьёт ножницы", NULL, "Ножницы режут бумагу"},
     {"Бумага накрывает камень", "Ножницы режут бумагу", NULL}
 };
 
 void print_round_results(Choice player_choice, Choice ai_choice, GameResult result) {
-    const char* explanation = a_explanation_matrix[player_choice - 1][ai_choice - 1];
+    const char* explanation = explanation_matrix[player_choice - 1][ai_choice - 1];
 
     switch (result) {
         case RESULT_WIN:
